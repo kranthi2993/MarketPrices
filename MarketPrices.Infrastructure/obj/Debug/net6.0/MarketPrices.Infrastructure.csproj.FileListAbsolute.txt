@@ -1,0 +1,17 @@
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Infrastructure.deps.json
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Infrastructure.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Infrastructure.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Application.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Domain.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Application.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\bin\Debug\net6.0\MarketPrices.Domain.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.AssemblyInfo.cs
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.csproj.CopyComplete
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\refint\MarketPrices.Infrastructure.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\MarketPrices.Infrastructure.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Infrastructure\obj\Debug\net6.0\ref\MarketPrices.Infrastructure.dll

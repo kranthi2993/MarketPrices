@@ -1,0 +1,329 @@
+2023-07-11 00:03:07.213 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:03:07.298 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:03:07.301 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:03:07.301 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:03:25.591 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:03:59.543 +05:30 [ERR] Failed executing DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Guid], [m].[PurchasedMarketItemId], [m].[PurchasedQuantity]
+FROM [MarketItemQuantitys] AS [m]
+2023-07-11 00:03:59.665 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MarketPrices.Persistence.DBContext.MarketDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:e305ffd4-4cc0-449a-95f5-fdce2f6f69d1
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:e305ffd4-4cc0-449a-95f5-fdce2f6f69d1
+Error Number:208,State:1,Class:16
+2023-07-11 00:03:59.930 +05:30 [ERR] HTTP GET /api/MarketItems/GetCheckoutItems responded 500 in 34353.7711 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MarketPrices.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\Repositories\GenericRepository.cs:line 37
+   at MarketPrices.Persistence.Repositories.MarketItemQuantityRepository.GetMarketItemQuantityDetails(String Guid) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\Repositories\MarketItemQuantityRepository.cs:line 31
+   at MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers.GetMarketItemOffersListQueryHandler.Handle(GetMarketItemOffersListQuery request, CancellationToken cancellationToken) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\Features\MarketItem\Queries\GetMarketItemOffers\GetMarketItemOffersListQueryHandler.cs:line 33
+   at MarketPrices.Api.Controllers.MarketItemsController.GetCheckoutItems(String Guid) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\Controllers\MarketItemsController.cs:line 34
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:e305ffd4-4cc0-449a-95f5-fdce2f6f69d1
+Error Number:208,State:1,Class:16
+2023-07-11 00:04:00.429 +05:30 [ERR] {"Errors":{},"Type":"InternalServerError","Title":"Invalid object name 'MarketItemQuantitys'.","Status":500,"Detail":"   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location ---\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at MarketPrices.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Persistence\\Repositories\\GenericRepository.cs:line 37\r\n   at MarketPrices.Persistence.Repositories.MarketItemQuantityRepository.GetMarketItemQuantityDetails(String Guid) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Persistence\\Repositories\\MarketItemQuantityRepository.cs:line 31\r\n   at MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers.GetMarketItemOffersListQueryHandler.Handle(GetMarketItemOffersListQuery request, CancellationToken cancellationToken) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Application\\Features\\MarketItem\\Queries\\GetMarketItemOffers\\GetMarketItemOffersListQueryHandler.cs:line 33\r\n   at MarketPrices.Api.Controllers.MarketItemsController.GetCheckoutItems(String Guid) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Api\\Controllers\\MarketItemsController.cs:line 34\r\n   at lambda_method6(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at MarketPrices.Api.MiddleWare.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Api\\MiddleWare\\ExceptionMiddleware.cs:line 23","Instance":null,"Extensions":{}}
+2023-07-11 00:06:33.099 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:06:33.163 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:06:33.165 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:06:33.166 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:06:49.338 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:07:13.348 +05:30 [ERR] Failed executing DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Guid], [m].[PurchasedMarketItemId], [m].[PurchasedQuantity]
+FROM [MarketItemQuantitys] AS [m]
+2023-07-11 00:07:13.532 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MarketPrices.Persistence.DBContext.MarketDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:14ca5e54-a5a6-4361-b2ac-bc0dbd86bdd4
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:14ca5e54-a5a6-4361-b2ac-bc0dbd86bdd4
+Error Number:208,State:1,Class:16
+2023-07-11 00:07:13.749 +05:30 [ERR] HTTP GET /api/MarketItems/GetCheckoutItems responded 500 in 24422.0147 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MarketPrices.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\Repositories\GenericRepository.cs:line 37
+   at MarketPrices.Persistence.Repositories.MarketItemQuantityRepository.GetMarketItemQuantityDetails(String Guid) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\Repositories\MarketItemQuantityRepository.cs:line 31
+   at MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers.GetMarketItemOffersListQueryHandler.Handle(GetMarketItemOffersListQuery request, CancellationToken cancellationToken) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\Features\MarketItem\Queries\GetMarketItemOffers\GetMarketItemOffersListQueryHandler.cs:line 33
+   at MarketPrices.Api.Controllers.MarketItemsController.GetCheckoutItems(String Guid) in C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\Controllers\MarketItemsController.cs:line 34
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:14ca5e54-a5a6-4361-b2ac-bc0dbd86bdd4
+Error Number:208,State:1,Class:16
+2023-07-11 00:07:14.220 +05:30 [ERR] {"Errors":{},"Type":"InternalServerError","Title":"Invalid object name 'MarketItemQuantitys'.","Status":500,"Detail":"   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location ---\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at MarketPrices.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Persistence\\Repositories\\GenericRepository.cs:line 37\r\n   at MarketPrices.Persistence.Repositories.MarketItemQuantityRepository.GetMarketItemQuantityDetails(String Guid) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Persistence\\Repositories\\MarketItemQuantityRepository.cs:line 31\r\n   at MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers.GetMarketItemOffersListQueryHandler.Handle(GetMarketItemOffersListQuery request, CancellationToken cancellationToken) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Application\\Features\\MarketItem\\Queries\\GetMarketItemOffers\\GetMarketItemOffersListQueryHandler.cs:line 33\r\n   at MarketPrices.Api.Controllers.MarketItemsController.GetCheckoutItems(String Guid) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Api\\Controllers\\MarketItemsController.cs:line 34\r\n   at lambda_method6(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at MarketPrices.Api.MiddleWare.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\\Users\\Kranthi\\source\\repos\\MarketPrices\\MarketPrices.Api\\MiddleWare\\ExceptionMiddleware.cs:line 23","Instance":null,"Extensions":{}}
+2023-07-11 00:13:10.410 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:13:10.506 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:13:10.507 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:13:10.509 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:13:30.517 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:14:12.250 +05:30 [ERR] Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Guid], [m].[PurchasedMarketItemId], [m].[PurchasedQuantity]
+FROM [MarketItemQuantitys] AS [m]
+2023-07-11 00:14:12.381 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MarketPrices.Persistence.DBContext.MarketDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:9acb0d36-f696-482d-8b61-752b7a069403
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:9acb0d36-f696-482d-8b61-752b7a069403
+Error Number:208,State:1,Class:16
+2023-07-11 00:20:27.977 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:20:28.028 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:20:28.029 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:20:28.030 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:20:56.060 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:22:15.050 +05:30 [ERR] Failed executing DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Guid], [m].[PurchasedMarketItemId], [m].[PurchasedQuantity]
+FROM [MarketItemQuantitys] AS [m]
+2023-07-11 00:22:15.185 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MarketPrices.Persistence.DBContext.MarketDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:7c08660c-ef4a-4815-849d-101ccd813f17
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MarketItemQuantitys'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:7c08660c-ef4a-4815-849d-101ccd813f17
+Error Number:208,State:1,Class:16
+2023-07-11 00:28:42.241 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:28:42.289 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:28:42.291 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:28:42.291 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:29:01.588 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:35:54.183 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:35:54.246 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:35:54.247 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:35:54.248 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:36:08.638 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:43:00.082 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:43:00.150 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:43:00.152 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:43:00.152 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:43:17.990 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:46:21.097 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:46:21.169 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:46:21.170 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:46:21.171 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:46:34.797 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:49:49.421 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 00:49:49.473 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 00:49:49.475 +05:30 [INF] Hosting environment: Development
+2023-07-11 00:49:49.475 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 00:50:11.942 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 00:50:41.930 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 29996.5260 ms
+2023-07-11 01:50:40.105 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 01:50:40.183 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 01:50:40.187 +05:30 [INF] Hosting environment: Development
+2023-07-11 01:50:40.187 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 01:50:51.003 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 02:05:57.631 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 02:05:57.684 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 02:05:57.687 +05:30 [INF] Hosting environment: Development
+2023-07-11 02:05:57.688 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 02:06:11.046 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 02:08:00.195 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 109154.1126 ms
+2023-07-11 02:11:01.235 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 429.7240 ms
+2023-07-11 02:12:20.151 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 02:12:20.200 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 02:12:20.202 +05:30 [INF] Hosting environment: Development
+2023-07-11 02:12:20.202 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 02:13:12.293 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 02:13:15.189 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 2903.5475 ms
+2023-07-11 02:14:12.051 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 400 in 33.8632 ms
+2023-07-11 02:14:38.069 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 8261.4698 ms
+2023-07-11 02:31:01.633 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 02:31:01.688 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 02:31:01.692 +05:30 [INF] Hosting environment: Development
+2023-07-11 02:31:01.696 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 02:31:19.081 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 02:31:53.693 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 34617.3197 ms
+2023-07-11 02:32:47.870 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 4588.1417 ms
+2023-07-11 02:36:38.506 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 400 in 76.8554 ms
+2023-07-11 02:37:11.778 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 400 in 7.1861 ms
+2023-07-11 02:38:48.330 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 400 in 15.0717 ms
+2023-07-11 02:39:35.999 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 400 in 1.7925 ms
+2023-07-11 02:40:52.328 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 634.1422 ms
+2023-07-11 02:42:19.417 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 26897.6853 ms
+2023-07-11 02:47:24.894 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 33.2960 ms
+2023-07-11 02:47:50.894 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 7517.3535 ms
+2023-07-11 02:49:07.820 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 22.4905 ms
+2023-07-11 02:49:39.810 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 6921.9732 ms
+2023-07-11 03:40:15.034 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 03:40:15.092 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 03:40:15.094 +05:30 [INF] Hosting environment: Development
+2023-07-11 03:40:15.095 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 03:41:44.622 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 03:41:44.772 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 400 in 153.7123 ms
+2023-07-11 03:42:38.232 +05:30 [INF] HTTP POST /api/MarketItems/PostMarketItems responded 201 in 3164.8631 ms
+2023-07-11 03:43:02.335 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 3878.7905 ms
+2023-07-11 03:46:53.316 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 128075.8709 ms
+2023-07-11 03:54:30.547 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 03:54:30.608 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 03:54:30.613 +05:30 [INF] Hosting environment: Development
+2023-07-11 03:54:30.615 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 03:55:02.633 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 03:55:19.731 +05:30 [INF] HTTP GET /api/MarketItems/GetCheckoutItems responded 200 in 17102.4876 ms
+2023-07-11 04:08:49.510 +05:30 [INF] Now listening on: http://localhost:5209
+2023-07-11 04:08:49.570 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-11 04:08:49.572 +05:30 [INF] Hosting environment: Development
+2023-07-11 04:08:49.573 +05:30 [INF] Content root path: C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Api\
+2023-07-11 04:08:58.359 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-07-11 04:09:01.468 +05:30 [INF] Market Items were retrieved successfully
+2023-07-11 04:09:01.506 +05:30 [INF] HTTP GET /api/MarketItems/GetMarketItems responded 200 in 3156.5032 ms

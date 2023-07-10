@@ -1,0 +1,17 @@
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Persistence.deps.json
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Persistence.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Persistence.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Application.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Domain.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Application.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\bin\Debug\net6.0\MarketPrices.Domain.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.csproj.AssemblyReference.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.AssemblyInfoInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.AssemblyInfo.cs
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.csproj.CopyComplete
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\refint\MarketPrices.Persistence.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\MarketPrices.Persistence.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Persistence\obj\Debug\net6.0\ref\MarketPrices.Persistence.dll

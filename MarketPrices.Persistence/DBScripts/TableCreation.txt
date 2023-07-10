@@ -1,0 +1,78 @@
+﻿USE [db_marketprices]
+GO
+
+/****** Object:  Table [dbo].[MarketItems]    Script Date: 09-07-2023 11:30:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+------------------------------------------Marketitems
+CREATE TABLE [dbo].[MarketItems](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ProductCode] [nvarchar](50) NOT NULL,
+	[Name] [nvarchar](100) NULL,
+	[Price] [decimal](18, 3) NOT NULL,
+	[Quantity] INT NULL
+ CONSTRAINT [PK_MarketItems] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+------------------------------------Offers
+CREATE TABLE [dbo].[Offers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NULL,
+ CONSTRAINT [PK_Offers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+---------------------------------MarketOffers
+CREATE TABLE [dbo].[MarketItemOffers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[PurchasedMarketItemId] INT NOT NULL,
+	[PurchasedQuantity] INT NULL,
+	[OfferedMarketItemId] INT NOT NULL,
+	[OfferedPrice] DECIMAL(18,3) NULL,
+	[OfferedQuantity] INT NULL,
+	[DiscountPrice] DECIMAL(18,3) NULL,
+	[Limit] INT NULL,
+	[OfferId] INT NOT NULL,
+	[Active] BIT NOT NULL
+	CONSTRAINT fk_PurchasedMarketItemId FOREIGN KEY (PurchasedMarketItemId) REFERENCES MarketItems(Id),
+	CONSTRAINT fk_OfferedMarketItemId FOREIGN KEY (OfferedMarketItemId) REFERENCES MarketItems(Id),
+	CONSTRAINT fk_OfferId FOREIGN KEY (OfferId) REFERENCES Offers(Id),
+ CONSTRAINT [PK_MarketItemOffers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+---------------------------------MarketItemQuantity
+CREATE TABLE [dbo].[MarketItemQuantity](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[PurchasedMarketItemId] INT NOT NULL,
+	[PurchasedQuantity] INT NULL,
+	[Guid] nvarchar(50) NOT NULL
+	CONSTRAINT fk_MQ_PurchasedMarketItemId FOREIGN KEY (PurchasedMarketItemId) REFERENCES MarketItems(Id),
+	
+ CONSTRAINT [PK_MarketItemQuantity] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+
+
+

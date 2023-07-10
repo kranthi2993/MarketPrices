@@ -1,0 +1,22 @@
+﻿USE [db_marketprices]
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_GetMarketOfferItems]    Script Date: 09-07-2023 16:16:23 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_GetMarketOfferItems]
+AS
+BEGIN
+SELECT mf.Id,PurchasedMarketItemId,PurchasedQuantity,OfferedMarketItemId
+,ISNULL(OfferedPrice,0) as OfferedPrice,OfferedQuantity,DiscountPrice,Limit,OfferId
+FROM [dbo].[MarketItemOffers] mf  
+JOIN [dbo].[Offers] ofe ON mf.OfferId = ofe.Id
+LEFT JOIN  [dbo].[MarketItems] mi ON mi.Id = mf.PurchasedMarketItemId
+LEFT JOIN [dbo].[MarketItems] mi2 ON mi2.Id = mf.OfferedMarketItemId
+WHERE mf.Active = 1
+END
+GO

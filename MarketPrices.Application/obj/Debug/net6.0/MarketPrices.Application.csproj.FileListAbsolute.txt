@@ -1,0 +1,15 @@
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\bin\Debug\net6.0\MarketPrices.Application.deps.json
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\bin\Debug\net6.0\MarketPrices.Application.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\bin\Debug\net6.0\MarketPrices.Application.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\bin\Debug\net6.0\MarketPrices.Domain.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\bin\Debug\net6.0\MarketPrices.Domain.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.csproj.AssemblyReference.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.AssemblyInfoInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.AssemblyInfo.cs
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.csproj.CoreCompileInputs.cache
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.csproj.CopyComplete
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\refint\MarketPrices.Application.dll
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\MarketPrices.Application.pdb
+C:\Users\Kranthi\source\repos\MarketPrices\MarketPrices.Application\obj\Debug\net6.0\ref\MarketPrices.Application.dll
