@@ -29,10 +29,10 @@ namespace MarketPrices.Api.Controllers
 
         [HttpGet]
         [Route("GetCheckoutItems")]
-        public async Task<List<CheckoutMarketItemListDto>> GetCheckoutItems(string Guid)
+        public async Task<List<CheckoutMarketItemListDto>> GetCheckoutItems(string guid)
         { 
-            var marketItemsCheckoutList = await _mediator.Send(new GetMarketItemOffersListQuery { Guid = Guid });
-            return marketItemsCheckoutList;
+            var checkoutMarketItemPricesList = await _mediator.Send(new GetCheckoutMarketItemPricesListQuery { guid = guid });
+            return checkoutMarketItemPricesList;
         }
 
         [HttpPost]
@@ -41,7 +41,6 @@ namespace MarketPrices.Api.Controllers
         {
             var response = await _mediator.Send(new CreateMarketItemQuantityCommand { lstMarketitem = lstMarketItemList });
             return CreatedAtAction(nameof(GetCheckoutItems), new { id = response });
-           // return Ok(1);
         }
 
     }

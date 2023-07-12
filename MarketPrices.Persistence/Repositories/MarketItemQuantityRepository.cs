@@ -20,15 +20,15 @@ namespace MarketPrices.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<MarketItem>> GetMarketItemQuantityDetails(string Guid)
+        public async Task<List<MarketItem>> GetMarketItemQuantityDetails(string guid)
         {
             List<MarketItem> marketItemDetails = await _context.MarketItems.ToListAsync();
             var marketItemQuantity = await GetAsync();
 
             var marketItemQuantityDetails = (from a in marketItemQuantity
                                              join b in marketItemDetails
-                                      on a.PurchasedMarketItemId equals b.Id
-                                             where a.Guid == Guid
+                                             on a.PurchasedMarketItemId equals b.Id
+                                             where a.Guid == guid && a.PurchasedQuantity > 0
                                              select new { left = a, right = b }).Select(Res =>
                                              {
                                                  Res.right.Quantity = Res.left.PurchasedQuantity;

@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers
 {
-    public class GetMarketItemOffersListQuery : IRequest<List<CheckoutMarketItemListDto>>
+    public class GetCheckoutMarketItemPricesListQuery : IRequest<List<CheckoutMarketItemListDto>>
     {
-        public string Guid { get; set; }
+        public string guid { get; set; } = string.Empty;
     }
 }

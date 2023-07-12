@@ -11,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1D52087F-C2A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9D804C70-9663-48EE-AD22-3E6C761F30D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Domain", "MarketPrices.Domain\MarketPrices.Domain.csproj", "{1C60CD02-C384-45F4-8A63-54AA03319D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPrices.Domain", "MarketPrices.Domain\MarketPrices.Domain.csproj", "{1C60CD02-C384-45F4-8A63-54AA03319D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Application", "MarketPrices.Application\MarketPrices.Application.csproj", "{C2C61148-56BB-4754-96AE-8905B312A726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPrices.Application", "MarketPrices.Application\MarketPrices.Application.csproj", "{C2C61148-56BB-4754-96AE-8905B312A726}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{45AF33C0-E9C5-4113-91C5-96F0B1C8CC76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Persistence", "MarketPrices.Persistence\MarketPrices.Persistence.csproj", "{E87FFCBC-D737-4115-B35C-9C3C4DC2511C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPrices.Persistence", "MarketPrices.Persistence\MarketPrices.Persistence.csproj", "{E87FFCBC-D737-4115-B35C-9C3C4DC2511C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Infrastructure", "MarketPrices.Infrastructure\MarketPrices.Infrastructure.csproj", "{D285FFF9-9EB2-461A-95BC-6A45656075FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPrices.Infrastructure", "MarketPrices.Infrastructure\MarketPrices.Infrastructure.csproj", "{D285FFF9-9EB2-461A-95BC-6A45656075FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Api", "MarketPrices.Api\MarketPrices.Api.csproj", "{979273C5-C929-4695-810D-BF4BB4EEDBE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPrices.Api", "MarketPrices.Api\MarketPrices.Api.csproj", "{979273C5-C929-4695-810D-BF4BB4EEDBE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPrices.Application.UnitTests", "MarketPrices.Application.UnitTests\MarketPrices.Application.UnitTests.csproj", "{E10D78CD-CBD0-4D92-8C52-929F68C079AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{979273C5-C929-4695-810D-BF4BB4EEDBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979273C5-C929-4695-810D-BF4BB4EEDBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979273C5-C929-4695-810D-BF4BB4EEDBE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10D78CD-CBD0-4D92-8C52-929F68C079AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10D78CD-CBD0-4D92-8C52-929F68C079AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10D78CD-CBD0-4D92-8C52-929F68C079AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10D78CD-CBD0-4D92-8C52-929F68C079AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{E87FFCBC-D737-4115-B35C-9C3C4DC2511C} = {45AF33C0-E9C5-4113-91C5-96F0B1C8CC76}
 		{D285FFF9-9EB2-461A-95BC-6A45656075FF} = {45AF33C0-E9C5-4113-91C5-96F0B1C8CC76}
 		{979273C5-C929-4695-810D-BF4BB4EEDBE9} = {1D52087F-C2AF-490A-955D-FB3FCD56DEDD}
+		{E10D78CD-CBD0-4D92-8C52-929F68C079AB} = {90CE6663-8547-4D3F-8E32-609E765AE074}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B149A78B-0E8D-43B5-9721-A0A8DEA32173}

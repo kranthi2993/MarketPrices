@@ -11,6 +11,6 @@ namespace MarketPrices.Application.Contracts.Persistence
     public interface IMarketItemQuantityRepository: IGenericRepository<MarketItemQuantity>
     {
         Task AddMarketItemQuantities(List<MarketItemQuantity> lstMarketItemQuantities);
-        Task<List<MarketItem>> GetMarketItemQuantityDetails(string id);
+        Task<List<MarketItem>> GetMarketItemQuantityDetails(string guid);
     }
 }

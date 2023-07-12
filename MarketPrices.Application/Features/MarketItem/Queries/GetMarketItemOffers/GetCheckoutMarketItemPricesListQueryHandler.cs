@@ -15,12 +15,12 @@ using System.Xml.Linq;
 
 namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers
 {
-    public class GetMarketItemOffersListQueryHandler : IRequestHandler<GetMarketItemOffersListQuery, List<CheckoutMarketItemListDto>>
+    public class GetCheckoutMarketItemPricesListQueryHandler : IRequestHandler<GetCheckoutMarketItemPricesListQuery, List<CheckoutMarketItemListDto>>
     {
         private readonly IMarketItemOfferRepository _marketItemOfferRepository;
         private readonly IMarketItemQuantityRepository _marketItemQuantityRepository;
         private readonly IMapper _mapper;
-        public GetMarketItemOffersListQueryHandler(
+        public GetCheckoutMarketItemPricesListQueryHandler(
             IMarketItemOfferRepository marketItemOfferRepository,
             IMarketItemQuantityRepository marketItemQuantityRepository,
             IMapper mapper)
@@ -29,13 +29,14 @@ namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffe
             _marketItemQuantityRepository = marketItemQuantityRepository;
             _mapper = mapper;
         }
-        public async Task<List<CheckoutMarketItemListDto>> Handle(GetMarketItemOffersListQuery request, CancellationToken cancellationToken)
+        public async Task<List<CheckoutMarketItemListDto>> Handle(GetCheckoutMarketItemPricesListQuery request, CancellationToken cancellationToken)
         {
-            var items = await _marketItemQuantityRepository.GetMarketItemQuantityDetails(request.Guid);
+            var items = await _marketItemQuantityRepository.GetMarketItemQuantityDetails(request.guid);
             var marketItemOffers = await _marketItemOfferRepository.GetMarketItemOfferWithDetails();
 
             var marketItemsDTO = _mapper.Map<List<MarketItemListDto>>(items);
 
+            marketItemsDTO = marketItemsDTO.Where(x => x.Quantity > 0).Select(x => x).ToList();
             var marketItemsCheckoutList = await Task.Run(() => CalculateOffer(marketItemsDTO, marketItemOffers)).ConfigureAwait(false);
             return marketItemsCheckoutList;
         }
