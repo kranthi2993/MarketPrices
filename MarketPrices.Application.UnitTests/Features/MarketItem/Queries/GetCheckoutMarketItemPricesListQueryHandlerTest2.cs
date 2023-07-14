@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using MarketPrices.Application.Contracts.Logging;
 using MarketPrices.Application.Contracts.Persistence;
 using MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffers;
 using MarketPrices.Application.MappingProfiles;
@@ -14,16 +13,16 @@ using System.Threading.Tasks;
 
 namespace MarketPrices.Application.UnitTests.Features.MarketItem.Queries
 {
-    public class GetCheckoutMarketItemPricesListQueryHandlerTests
+    public class GetCheckoutMarketItemPricesListQueryHandlerTest2
     {
         private readonly Mock<IMarketItemOfferRepository> _mockMarketItemOfferRepo;
         private readonly Mock<IMarketItemQuantityRepository> _mockMarketitemQuantityRepo;
         private IMapper _mapper;
 
-        public GetCheckoutMarketItemPricesListQueryHandlerTests()
+        public GetCheckoutMarketItemPricesListQueryHandlerTest2()
         {
             _mockMarketItemOfferRepo = MockMarketItemOfferRepository.GetMarketItemOffers();
-            _mockMarketitemQuantityRepo = MockMarketItemQuantityRepository.GetMarketItemQuantityDetails();
+            _mockMarketitemQuantityRepo = MockMarketItemQuantityRepository.GetMarketItemQuantityDetailsTest2();
 
             var mapperConfig = new MapperConfiguration(c =>
             {
@@ -32,6 +31,7 @@ namespace MarketPrices.Application.UnitTests.Features.MarketItem.Queries
             _mapper = mapperConfig.CreateMapper();
         }
 
+        //CH1, AP1, AP1, AP1, MK1
         [Fact]
         public async Task GetCheckoutMarketItemPricesListTest()
         {
@@ -40,7 +40,8 @@ namespace MarketPrices.Application.UnitTests.Features.MarketItem.Queries
             var result = await handler.Handle(new GetCheckoutMarketItemPricesListQuery(), CancellationToken.None);
 
             result.ShouldBeOfType<List<CheckoutMarketItemListDto>>();
-            result.Count.ShouldBe(3);
+            Math.Round(result.Sum(x => x.Price), 2).ShouldBe(16.61);
         }
+
     }
 }

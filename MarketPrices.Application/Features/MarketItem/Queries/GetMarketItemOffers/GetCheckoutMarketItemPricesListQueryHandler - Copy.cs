@@ -85,7 +85,17 @@ namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffe
                  select item).ToList().ForEach(item =>
                  {
                      item.DiscountPrice = a.filteredMarketItemOffer.DiscountPrice * item.Quantity;
-                     item.Price = a.filteredMarketItemOffer.OfferedPrice != 0 ? a.filteredMarketItemOffer.OfferedPrice * item.Quantity : item.Price * item.Quantity;           
+                     item.Price = a.filteredMarketItemOffer.OfferedPrice != 0 ? a.filteredMarketItemOffer.OfferedPrice * item.Quantity : item.Price * item.Quantity;
+                     item.Quantity = a.filteredMarketItemOffer.Limit == 0 ?
+                                      (a.filteredMarketItemOffer.OfferedQuantity != a.filteredMarketItemOffer.PurchasedQuantity ?
+                                      item.Quantity * a.filteredMarketItemOffer.OfferedQuantity : item.Quantity) :
+
+                                       (item.Quantity > a.filteredMarketItemOffer.Limit &&
+                                       a.filteredMarketItemOffer.OfferedQuantity != a.filteredMarketItemOffer.PurchasedQuantity ?
+                                      a.filteredMarketItemOffer.Limit * a.filteredMarketItemOffer.OfferedQuantity : item.Quantity);
+                                      
+
+                                      
                      item.OfferName = a.filteredMarketItemOffer.Offer?.Name;
                  });
 
@@ -96,8 +106,9 @@ namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffe
                                 {
                                     Id = a.filteredMarketItemOffer.OfferedMarketItemId,
                                    
-                                    Quantity = item.Quantity * a.filteredMarketItemOffer.OfferedQuantity,
-                                               
+                                    Quantity = a.filteredMarketItemOffer.Limit == 0 || item.Quantity < a.filteredMarketItemOffer.Limit 
+                                               ? item.Quantity * a.filteredMarketItemOffer.OfferedQuantity
+                                               : a.filteredMarketItemOffer.Limit * a.filteredMarketItemOffer.OfferedQuantity,
                                     Price = a.filteredMarketItemOffer.OfferedPrice,
                                     DiscountPrice = a.filteredMarketItemOffer.DiscountPrice,
                                     Name = items.Where( x =>x.Id == a.filteredMarketItemOffer.OfferedMarketItemId).Select(x => x.Name).FirstOrDefault(),
@@ -105,44 +116,50 @@ namespace MarketPrices.Application.Features.MarketItem.Queries.GetMarketItemOffe
                                     ProductCode = items.Where(x => x.Id == a.filteredMarketItemOffer.OfferedMarketItemId).Select(x => x.ProductCode).FirstOrDefault()
                                 }).ToList();
 
-               
-                lstOfferedMarketItemWithDifferentProducts.AddRange(listItem);
-            }
-
-            //if offer object exist without any discount then update offering with Quantity and price
-            var data = (from item in lstCheckoutMarketItemListDto
-                        join offereditem in lstOfferedMarketItemWithDifferentProducts
-                        on item.Id equals offereditem.Id
-                        where item.DiscountPrice == 0 && item.OfferName == String.Empty
-                        select new { item, offereditem }).Select(res =>
-                        {
-                            res.item.Price = (res.item.Price - res.offereditem.DiscountPrice) * res.item.Quantity;
-                            res.item.Quantity = res.item.Quantity;
-                            res.item.DiscountPrice = res.offereditem.DiscountPrice * res.item.Quantity;
-                            res.item.OfferName = res.offereditem.OfferName;
-                            return res.item;
-                        }).ToList();
-
-            //if offer object exist without any discount then insert offering which doesnot exist
-            var insertItem = (from offereditem in lstOfferedMarketItemWithDifferentProducts
-                              where !lstCheckoutMarketItemListDto.Any(x => x.Id == offereditem.Id)
-                              select offereditem).ToList();
-
-
-            foreach (var i in insertItem)
-            {
-                lstCheckoutMarketItemListDto.AddRange(new List<CheckoutMarketItemListDto>() {
-                new CheckoutMarketItemListDto
+                listItem.Select(x =>
                 {
-                    Id = i.Id,
-                    DiscountPrice = i.DiscountPrice,
-                    Quantity = i.Quantity,
-                    Price = i.Price * i.Quantity,
-                    Name = i.Name,
-                    OfferName = i.OfferName,
-                    ProductCode = i.ProductCode
-                }});
+                    x.Price = x.Quantity * x.Price;
+                    x.DiscountPrice = x.Quantity * x.DiscountPrice;
+                    return x;
+                });
+                lstCheckoutMarketItemListDto.AddRange(listItem);
+                //lstOfferedMarketItemWithDifferentProducts.AddRange(listItem);
             }
+
+            ////if offer object exist without any discount then update offering with Quantity and price
+            //var data = (from item in lstCheckoutMarketItemListDto
+            //            join offereditem in lstOfferedMarketItemWithDifferentProducts
+            //            on item.Id equals offereditem.Id
+            //            where item.DiscountPrice == 0 && item.OfferName == String.Empty
+            //            select new { item, offereditem }).Select(res =>
+            //            {
+            //                res.item.Price = (res.item.Price - res.offereditem.DiscountPrice) * (res.item.Quantity - res.offereditem.Quantity);
+            //                res.item.Quantity = res.offereditem.Quantity > res.item.Quantity? res.offereditem.Quantity: res.item.Quantity;
+            //                res.item.DiscountPrice = res.offereditem.DiscountPrice * res.offereditem.Quantity;
+            //                res.item.OfferName = res.offereditem.OfferName;
+            //                return res.item;
+            //            }).ToList();
+
+            ////if offer object exist without any discount then insert offering which doesnot exist
+            //var insertItem = (from offereditem in lstOfferedMarketItemWithDifferentProducts
+            //                  where !lstCheckoutMarketItemListDto.Any(x => x.Id == offereditem.Id)
+            //                  select offereditem).ToList();
+
+
+            //foreach (var i in insertItem)
+            //{
+            //    lstCheckoutMarketItemListDto.AddRange(new List<CheckoutMarketItemListDto>() {
+            //    new CheckoutMarketItemListDto
+            //    {
+            //        Id = i.Id,
+            //        DiscountPrice = i.DiscountPrice,
+            //        Quantity = i.Quantity,
+            //        Price = i.Price * i.Quantity,
+            //        Name = i.Name,
+            //        OfferName = i.OfferName,
+            //        ProductCode = i.ProductCode
+            //    }});
+            //}
 
             //Calculate Price for non offer Items
             lstCheckoutMarketItemListDto.Where(x =>x.OfferName == string.Empty).Select(x => x.Price = x.Price *x.Quantity).ToList();
